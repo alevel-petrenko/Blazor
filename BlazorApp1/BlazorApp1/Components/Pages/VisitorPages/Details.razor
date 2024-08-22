@@ -1,0 +1,51 @@
+﻿@page "/visitors/details"
+
+@using Microsoft.EntityFrameworkCore
+@using AppDatabase.Models
+@inject IDbContextFactory<AppDatabase.Data.BlazorAppContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Details</PageTitle>
+
+<h1>Details</h1>
+
+<div>
+    <h4>Visitor</h4>
+    <hr />
+    @if (visitor is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else {
+        <dl class="row">
+            <dt class="col-sm-2">Name</dt>
+            <dd class="col-sm-10">@visitor.Name</dd>
+            <dt class="col-sm-2">Surname</dt>
+            <dd class="col-sm-10">@visitor.Surname</dd>
+            <dt class="col-sm-2">Birthday</dt>
+            <dd class="col-sm-10">@visitor.Birthday</dd>
+        </dl>
+        <div>
+            <a href="@($"/visitors/edit?id={visitor.Id}")">Edit</a> |
+            <a href="@($"/visitors")">Back to List</a>
+        </div>
+    }
+</div>
+
+@code {
+    Visitor? visitor;
+
+    [SupplyParameterFromQuery]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        visitor = await context.Visitor.FirstOrDefaultAsync(m => m.Id == Id);
+
+        if (visitor is null)
+        {
+            NavigationManager.NavigateTo("notfound");
+        }
+    }
+}

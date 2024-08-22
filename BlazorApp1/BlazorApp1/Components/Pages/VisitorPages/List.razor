@@ -1,0 +1,38 @@
+﻿@page "/visitorslist"
+
+@* @rendermode InteractiveServer *@
+
+@using AppDatabase.Models
+@using Microsoft.EntityFrameworkCore
+@using MudBlazor
+@inject IDbContextFactory<AppDatabase.Data.BlazorAppContext> DbFactory
+
+<PageTitle>Visitors</PageTitle>
+
+<h3>List of all visitors</h3>
+
+@if (allVisitors is null)
+{
+    <p><em>Loading...</em></p>
+}
+<MudDataGrid T="Visitor" Items="allVisitors" SortMode="@SortMode.Multiple">
+    <Columns>
+        <PropertyColumn Property="x => x.Name" />
+        <PropertyColumn Property="x => x.Surname" />
+        <PropertyColumn Property="x => x.Allergy" />
+        <PropertyColumn Property="x => x.Birthday" Title="Date of birth" Format="dd/MM/yyyy"/>
+    </Columns>
+    <PagerContent>
+        <MudDataGridPager T="Visitor" />
+    </PagerContent>
+</MudDataGrid>
+
+@code {
+    List<Visitor> allVisitors = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        allVisitors = await context.Visitor.ToListAsync();
+    }
+}

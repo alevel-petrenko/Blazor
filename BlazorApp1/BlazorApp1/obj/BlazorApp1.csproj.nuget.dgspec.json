@@ -1,0 +1,281 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\AppDatabase\\AppDatabase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\AppDatabase\\AppDatabase.csproj",
+        "projectName": "AppDatabase",
+        "projectPath": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\AppDatabase\\AppDatabase.csproj",
+        "packagesPath": "C:\\Users\\anton.petrenko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\AppDatabase\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton.petrenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://pkgs.dev.azure.com/skykick/2c62f71f-7600-468a-a2dc-24a68cb0b045/_packaging/Migration_symbols/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/skykick/2c62f71f-7600-468a-a2dc-24a68cb0b045/_packaging/Platform/nuget/v3/index.json": {},
+          "https://skykick.pkgs.visualstudio.com/_packaging/Migration/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1.Client\\BlazorApp1.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1.Client\\BlazorApp1.Client.csproj",
+        "projectName": "BlazorApp1.Client",
+        "projectPath": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1.Client\\BlazorApp1.Client.csproj",
+        "packagesPath": "C:\\Users\\anton.petrenko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1.Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton.petrenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://pkgs.dev.azure.com/skykick/2c62f71f-7600-468a-a2dc-24a68cb0b045/_packaging/Migration_symbols/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/skykick/2c62f71f-7600-468a-a2dc-24a68cb0b045/_packaging/Platform/nuget/v3/index.json": {},
+          "https://skykick.pkgs.visualstudio.com/_packaging/Migration/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )",
+              "autoReferenced": true
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[7.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[8.0.8, 8.0.8]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
+        "projectName": "BlazorApp1",
+        "projectPath": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
+        "packagesPath": "C:\\Users\\anton.petrenko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton.petrenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://pkgs.dev.azure.com/skykick/2c62f71f-7600-468a-a2dc-24a68cb0b045/_packaging/Migration_symbols/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/skykick/2c62f71f-7600-468a-a2dc-24a68cb0b045/_packaging/Platform/nuget/v3/index.json": {},
+          "https://skykick.pkgs.visualstudio.com/_packaging/Migration/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\AppDatabase\\AppDatabase.csproj": {
+                "projectPath": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\AppDatabase\\AppDatabase.csproj"
+              },
+              "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1.Client\\BlazorApp1.Client.csproj": {
+                "projectPath": "C:\\Users\\anton.petrenko\\source\\repos\\BlazorApp1\\BlazorApp1\\BlazorApp1.Client\\BlazorApp1.Client.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[7.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

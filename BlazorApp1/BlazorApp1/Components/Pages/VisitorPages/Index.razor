@@ -1,0 +1,38 @@
+﻿@page "/visitors"
+
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using AppDatabase.Models
+@inject IDbContextFactory<AppDatabase.Data.BlazorAppContext> DbFactory
+
+<PageTitle>Visitors</PageTitle>
+
+<h1>Visitors</h1>
+
+<p>
+    <a href="visitors/create">Create new</a>
+</p>
+
+<QuickGrid Class="table" Items="@visitors" >
+    <Microsoft.AspNetCore.Components.QuickGrid.PropertyColumn Property="@(visitor => visitor.Name)" />
+    <Microsoft.AspNetCore.Components.QuickGrid.PropertyColumn Property="@(visitor => visitor.Surname)" />
+    <Microsoft.AspNetCore.Components.QuickGrid.PropertyColumn Property="@(visitor => visitor.Birthday)" Title="Date of birth" Format="dd/MM/yyyy" />
+
+    <Microsoft.AspNetCore.Components.QuickGrid.TemplateColumn Context="visitor">
+        <a href="@($"visitors/edit?id={visitor.Id}")">Edit</a> |
+        <a href="@($"visitors/details?id={visitor.Id}")">Details</a> |
+        <a href="@($"visitors/delete?id={visitor.Id}")">Delete</a>
+    </Microsoft.AspNetCore.Components.QuickGrid.TemplateColumn>
+</QuickGrid>
+
+@code{
+    private IQueryable<Visitor>? visitors;
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var context = DbFactory.CreateDbContext();
+        var visitorsList = await context.Visitor.ToListAsync();
+
+        visitors = visitorsList.AsQueryable();
+    }
+}
